@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modo Offline</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter', sans-serif;
+}
+
+body {
+  color:#fff;
+
+  /* TU IMAGEN DE FONDO */
+  background: url('ccc.1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* HEADER */
+header {
+  height: 100vh;
+}
+
+/* OVERLAY */
+.overlay {
+  background: rgba(0,0,0,0.65);
+  width: 100%;
+  height: 100%;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+/* LOGO GRANDE */
+.logo-hero img {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+/* TEXTO */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.hero p {
+  margin-top: 15px;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+/* BOTÓN */
+.btn {
+  margin-top: 25px;
+  padding: 15px 35px;
+  border-radius: 30px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SECCIONES */
+section {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.85);
+}
+
+/* CARDS */
+.cards {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.card {
+  background:#111;
+  padding:30px;
+  border-radius:15px;
+  width:250px;
+}
+
+/* FORM */
+input, textarea, select {
+  width:260px;
+  padding:12px;
+  margin:10px;
+  border-radius:20px;
+  border:none;
+  text-align:center;
+}
+
+textarea {
+  height:100px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
+
+/* FOOTER */
+footer {
+  padding:40px;
+  text-align:center;
+  background:#050505;
+  opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+  <div class="overlay">
+
+    <!-- LOGO CENTRADO -->
+    <div class="logo-hero">
+      <img src="aaa.1.png" alt="logo">
+    </div>
+
+    <!-- TEXTO -->
+    <div class="hero">
+      <h1>CONECTÁ DE VERDAD</h1>
+      <p>Eventos exclusivos para conocer gente nueva, sin pantallas, sin filtros.</p>
+      <button class="btn" onclick="scrollToForm()">QUIERO VIVIRLO</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- COMO FUNCIONA -->
+<section>
+  <h2>¿Cómo funciona?</h2>
+  <div class="cards">
+    <div class="card">📝 Te registrás</div>
+    <div class="card">🤝 Te conectamos</div>
+    <div class="card">🍻 Vivís la experiencia</div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="form">
+  <h2>Sumate a la experiencia</h2>
+
+  <form action="https://formspree.io/f/TU_ID" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required><br>
+    <input type="text" name="apellido" placeholder="Apellido" required><br>
+    <input type="number" name="edad" placeholder="Edad" required><br>
+
+    <select name="intereses" required>
+      <option value="">¿Qué te gusta?</option>
+      <option>Fiesta</option>
+      <option>Charlas</option>
+      <option>Networking</option>
+      <option>Citas</option>
+    </select><br>
+
+    <textarea name="tipo_persona" placeholder="¿Qué tipo de persona querés conocer?" required></textarea><br>
+    <textarea name="personalidad" placeholder="¿Cómo sos vos?" required></textarea><br>
+
+    <button class="btn">QUIERO ENTRAR 😈</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Modo Offline</p>
+</footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/TU_NUMERO?text=Quiero%20sumarme%20a%20Modo%20Offline%20😈" target="_blank">💬</a>
+
+<script>
+function scrollToForm() {
+  document.getElementById("form").scrollIntoView({ behavior:"smooth" });
+}
+</script>
+
+</body>
+</html>
